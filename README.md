@@ -2,14 +2,11 @@
 
 ### Adds a `keys` function to the gulp object which can be used for listening for/reacting to keystrokes..
 This package is pretty much a simple mixture of [Gulp.js](https://gulpjs.com/) and [This npm module called **keypress**](https://www.npmjs.com/package/keypress)
-
 ## Installation
-
 ### npm:
 ```
 $ npm i gulp-keylistener --save-dev
 ```
-
 ## Usage:
 Firstly, in order to use the `gulp.keys()` function, you must get your `gulp`
 instance from the `gulp-keylistener` package, like so:
