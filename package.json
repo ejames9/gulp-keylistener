@@ -1,6 +1,6 @@
 {
   "name": "gulp-keylistener",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Adds a `keys` function to the gulp object which can be used for listening for/reacting to keystrokes..",
   "main": "index.js",
   "scripts": {
