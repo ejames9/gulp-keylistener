@@ -27,7 +27,8 @@ gulp.task('default', ()=> {
 })
 ```
 **-NOTE** The listener does not listen system-wide. At this time, it only works
-within the context of the terminal.
+within the context of the terminal. It can't, for example, 'hear' a keypress in the  
+terminal made while working in a text-editor.
 
 The `gulp.keys()` function takes a callback as it's only argument, and it
 takes 2 arguments -- `ch` (for character) and `key`. `ch` will give you access
