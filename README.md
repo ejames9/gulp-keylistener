@@ -26,6 +26,9 @@ gulp.task('default', ()=> {
   })
 })
 ```
+**-NOTE** The listener does not listen system-wide. At this time, it only works
+within the context of the terminal.
+
 The `gulp.keys()` function takes a callback as it's only argument, and it
 takes 2 arguments -- `ch` (for character) and `key`. `ch` will give you access
 to a character value, i.e. 'a' or 'z' and `key` will give you an object that
