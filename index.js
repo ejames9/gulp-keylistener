@@ -13,12 +13,12 @@ var gulp = require('gulp'),
 keypress = require('keypress')
 /*
 Setting a global here, the listening pause functionality does
-not work the way i'd like it to, so i'm improvising a bit
-here. If the paused global is true, the keypress listener
-will ignore all keybinding key combinations *except*, ctrl-r
-(resume) which will resume the stream. process.stdin.pause() will
-not be used, because once the stream is paused, there is no
-way to turn it back on or kill the process....
+not work the way i'd like it to, so i'm improvising a bit.
+If the paused global is true, the keypress listener
+will ignore all keybinding key combinations *except*, ctrl-x (exit process),
+ctrl-c (exit process) and ctrl-w (toggle stream paused).
+Process.stdin.pause() will not be used, because once the stream is paused,
+there is no way to turn it back on or kill the process....
 */ global.paused = false
 
 const addGulpKeys =()=> {
