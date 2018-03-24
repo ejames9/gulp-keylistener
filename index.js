@@ -45,9 +45,9 @@ const keyListener =()=> {
       if (!paused) {
 // Run...
         cb(ch, key)
-// Narrative user update...
-        log('Listening for custom keybindings... Use "ctrl-x" or "ctrl-c" to quit, or "ctrl-w" to pause.', 'red')
       }
+// Narrative user update...
+        log('Listening for custom keybindings... Use "ctrl-x" or "ctrl-c" to quit, or "ctrl-w" to pause.\n', '#3F3')
     })
 /*
 Without setting rawMode, the stream would only be captured
