@@ -1,7 +1,7 @@
 {
   "name": "gulp-keylistener",
   "version": "0.1.8",
-  "description": "Adds a `keys` function to the gulp object which can be used for listening for/reacting to keystrokes..",
+  "description": "A `keys` function which can be used for listening for/reacting to keystrokes..",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,7 @@
   "author": "Eric James Foster",
   "license": "MIT",
   "dependencies": {
+    "elementsJS": "^0.9.30",
     "gulp": "^4.0.0",
     "keypress": "^0.2.1"
   }

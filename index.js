@@ -9,7 +9,8 @@ Eric James Foster, MIT License...
 */
 
 
-var keypress = require('keypress')
+var keypress = require('keypress'),
+         log = require('elementsJS').log
 /*
 Setting a global here, the listening pause functionality does
 not work the way i'd like it to, so i'm improvising a bit.
@@ -44,6 +45,8 @@ const keyListener =()=> {
       if (!paused) {
 // Run...
         cb(ch, key)
+// Narrative user update...
+        log('Listening for custom keybindings... Use "ctrl-x" or "ctrl-c" to quit, or "ctrl-w" to pause.', 'red')
       }
     })
 /*
