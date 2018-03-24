@@ -9,8 +9,7 @@ Eric James Foster, MIT License...
 */
 
 
-var gulp = require('gulp'),
-keypress = require('keypress')
+var keypress = require('keypress')
 /*
 Setting a global here, the listening pause functionality does
 not work the way i'd like it to, so i'm improvising a bit.
@@ -21,7 +20,7 @@ Process.stdin.pause() will not be used, because once the stream is paused,
 there is no way to turn it back on or kill the process....
 */ global.paused = false
 
-const addGulpKeys =()=> {
+const keyListener =()=> {
 // Start listening to keypress events...
   keypress(process.stdin)
 
@@ -54,11 +53,7 @@ key strike...
 */  process.stdin.setRawMode(true);
   }
 
-// Set gulp.listen to process.stdin.on function...
-  gulp.keys = keys
-
-// Return gulp object...
-  return gulp
+  return keys
 }
 
-module.exports = addGulpKeys()
+module.exports = keyListener()

@@ -8,17 +8,16 @@ This package is pretty much a simple mixture of [Gulp.js](https://gulpjs.com/) a
 $ npm i gulp-keylistener --save-dev
 ```
 ## Usage:
-Firstly, in order to use the `gulp.keys()` function, you must get your `gulp`
-instance from the `gulp-keylistener` package, like so:
+Firstly, you must get your `keys` function from the `gulp-keylistener` package, like so:
 ```js
-const gulp = require('gulp-keylistener')
+const keys = require('gulp-keylistener')
 ```
 Then you may use it like such:
 
 ```js
 // Our default task...
 gulp.task('default', ()=> {
-  gulp.keys((ch, key)=> {
+  keys((ch, key)=> {
 // if you pressed `ctrl-p`
     if (key.ctrl && key.name === 'p') {
 // Do amazing things!!!
@@ -28,7 +27,7 @@ gulp.task('default', ()=> {
 ```
 **-NOTE** The listener does not listen system-wide. At this time, it only works within the context of the terminal. It can't, for example, 'hear' a keypress in the terminal made while working in a text-editor.
 
-The `gulp.keys()` function takes a callback as it's only argument, and it
+The `keys()` function takes a callback as it's only argument, and it
 takes 2 arguments -- `ch` (for character) and `key`. `ch` will give you access
 to a character value, i.e. 'a' or 'z' and `key` will give you an object that
 resembles thusly:
@@ -42,7 +41,7 @@ resembles thusly:
 }
 ```
 By default, `ctrl-x` and `ctrl-c` will exit the process, which you will need to use,
-because the task you use `gulp.keys()` in will not finish on it's own. `ctrl-w` will
+because the task you use `keys()` in will not finish on it's own. `ctrl-w` will
 pause the listener, so that you may exit or unpause the the process, but your
 callback will not be called, even if you hit your designated keybindings.
 
